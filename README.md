@@ -3,22 +3,52 @@
 ## Anggota Kelompok(ID_GDSC-NAMA-ROLE):
 ### 46-Raden Surya M.P-Hyper(Hacker, Hipster, Hustler) A.K.A Solo :v
 
-## **Endpoint**
-### Registrasi
+## **API + End-Point**
 ```bash
-POST::http://localhost:4000/user/registrasi
+https://gdsc-tugas-fs-api.herokuapp.com/end-point
 ```
-### Login(Return token JWT)
+### End-Point
+#### Registrasi
 ```bash
-POST::http://localhost:4000/user/login
+POST::https://gdsc-tugas-fs-api.herokuapp.com/user/register
 ```
-### Ambil Data Wishlist(Masukan Token JWT Hasil dari Login untuk Akses)
 ```bash
-GET::http://localhost:4000/wishlist
+body{
+username: "input",
+password: "input"
+}
+response: "Message"
 ```
-### Update Data Wishlist(Masukan Token JWT Hasil dari Login untuk Akses)
+#### Login(Return token JWT)
 ```bash
-PATCH::http://localhost:4000/user/wishlist
+POST::https://gdsc-tugas-fs-api.herokuapp.com/user/login
+```
+```bash
+body{
+username: "input",
+password: "input"
+}
+response: jwt(Javascript Web Token)
+response: header('auth-token')
+```
+#### Ambil Data Wishlist(Masukan Token JWT Hasil dari Login untuk Akses)
+```bash
+GET::https://gdsc-tugas-fs-api.herokuapp.com/wishlist
+```
+```bash
+header: 'auth-token'
+response: Wishlist
+```
+#### Update Data Wishlist(Masukan Token JWT Hasil dari Login untuk Akses)
+```bash
+PATCH::https://gdsc-tugas-fs-api.herokuapp.com/wishlist
+```
+```bash
+header: 'auth-token'
+body{
+wishlist: [data]
+}
+response: "Message"
 ```
 
 ## **Struktur DB**

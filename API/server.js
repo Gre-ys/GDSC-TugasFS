@@ -19,5 +19,5 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/user', authRoute); 
 app.use('/wishlist', wishlistRoute);
 		
-app.get('/', async (req,res) => console.log('test'));
-app.listen(4000, () => console.log('Server Ready On Port:4000...'));
+app.get('/', async (req,res) => res.json('API Movie App GDSC'));
+app.listen(process.env.PORT || 4000, () => console.log('Server Ready On Port:4000...'));
