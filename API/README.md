@@ -53,6 +53,6 @@ response: "Message"
 
 ## **Struktur DB**
 ### Schema
-![schema](img/db-schema.PNG)
+![schema](../img/db-schema.PNG)
 ### Mongodb Atlas
-![mongodb](img/db-moatlas.PNG)
+![mongodb](../img/db-moatlas.PNG)
